@@ -1,0 +1,48 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Editar Evento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/master.css">
+  </head>
+  <body>
+<header>
+<img src="./img/logongm.png" alt="">
+</header>
+
+<nav>
+  <a href="./crearEvento-ngm.html"><h3>Crear Evento</h3></a><p>|</p><a href="./editEvento-ngm.html"><h3>Editar Evento</h3></a>
+</nav>
+
+<div class="formu">
+  <form class="crearEvento" action="index.html" method="post">
+    <h2>Editar Evento</h2>
+    <p>Nombre del Evento:</p>
+    <input type="text" name="nombreEvento" value="ej: Nygma #??? - Nombre">
+    <p>Flyer del evento:</p>
+    <input type="file" name="flyerEvento" value="">
+    <p>Lugar del Evento:</p>
+    <input type="text" name="lugarEvento" value="Nombre del spot"> <input type="text" name="dirEvento" value="Dirección del Evento">
+    <p>Fecha del Evento:</p>
+    <input type="date" name="tandasEvento" value="">
+    <p>Seleccionar Tanda activa:</p>
+    <select class="selector" name="selectorTanda">
+      <option value="early">Early - $1000</option>
+      <option value="nombreTanda1">Tanda 1 - $3000</option>
+      <option value="nombreTanda2">Tanda 2 - $5000</option>
+    </select>
+    <p>Describí tu evento</p>
+    <textarea name="descripEvento" rows="8" cols="40"></textarea>
+    <div class="buttons">
+    <button type="button" >Guardar Cambios</button>
+    <button type="button" >Cancelar</button>
+    </div>
+
+  </form>
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Crear Evento</title>
+    <link rel="stylesheet" href="./css/master.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <script>
+		function habilitar(value)
+		{
+			if(value==true)
+			{
+				// habilitamos
+				document.getElementById("entrada").disabled=false;
+			}else if(value==false){
+				// deshabilitamos
+				document.getElementById("entrada").disabled=true;
+			}
+		}
+	</script>
+  </head>
+  <body>
+<header>
+<img src="./img/logongm.png" alt="">
+</header>
+
+<nav>
+  <a href="./crearEvento-ngm.html"><h3>Crear Evento</h3></a><p>|</p><a href="./editEvento-ngm.html"><h3>Editar Evento</h3></a>
+</nav>
+
+<div class="formu">
+  <form class="crearEvento" action="index.html" method="post">
+    <h2>Crear Evento</h2>
+    <p>Nombre del Evento:</p>
+    <input type="text" name="nombreEvento" value="ej: Nygma #??? - Nombre">
+    <p>Flyer del evento:</p>
+    <input type="file" name="flyerEvento" value="">
+    <p>Lugar del Evento:</p>
+    <input type="text" name="lugarEvento" value="Nombre del spot"> <input type="text" name="dirEvento" value="Dirección del Evento">
+    <br>
+    <p>Fecha del Evento:</p>
+    <input type="date" name="fechaEvento" value="">
+    <br>
+    <p>Definí las tandas de venta <br> (ingresar al menos dos tandas):</p>
+    <div class="tandas">
+      <p>Early Bird:</p><input type="number" name="early" value="ingresar precio">
+      <p>Primera Tanda:</p><input type="number" name="nombreTanda1" value="ingresar precio">
+      <p>Segunda Tanda (Opcional):</p><input type="number" name="nombreTanda3" id="entrada" value="precio"><input type="checkbox" id="check" onchange="habilitar(this.checked);" checked><br>
+    </div>
+    <p>Describí tu evento</p>
+    <textarea name="descripEvento" rows="8" cols="40"></textarea>
+    <div class="buttons">
+    <button type="button" >Crear Evento</button>
+    <button type="button" >Cancelar</button>
+    </div>
+  </form>
+</div>
+
+  </body>
+</html>
